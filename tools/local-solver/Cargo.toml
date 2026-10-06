@@ -1,0 +1,17 @@
+[package]
+name = "poker-solver-sidecar"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-or-later"
+publish = false
+
+[dependencies]
+chrono = { version = "0.4.42", default-features = false, features = ["clock"] }
+postflop-solver = { git = "https://github.com/b-inary/postflop-solver.git", rev = "9d1509fe5077d019825f833eed04b16d342dfda1", default-features = false, features = ["rayon"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = { version = "1.0.145", features = ["float_roundtrip"] }
+tiny_http = "0.12.0"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

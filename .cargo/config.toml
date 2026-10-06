@@ -1,0 +1,13 @@
+[source.crates-io]
+replace-with = "vendored-sources"
+
+[source."git+https://github.com/b-inary/postflop-solver.git?rev=9d1509fe5077d019825f833eed04b16d342dfda1"]
+git = "https://github.com/b-inary/postflop-solver.git"
+rev = "9d1509fe5077d019825f833eed04b16d342dfda1"
+replace-with = "vendored-sources"
+
+[source.vendored-sources]
+directory = "tools/local-solver/vendor"
+
+[net]
+offline = true

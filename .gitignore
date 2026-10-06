@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+.playwright-cli/
+.local-tools/
+tools/local-solver/target/
+tools/local-solver/cache/
+
+# Vendored tiny_http example TLS material. These are upstream demo files, not
+# Joseph's keys, but nothing key-shaped belongs in a fresh history: it trips
+# every secret scanner and trains the habit of ignoring those alerts. Cargo
+# does not build examples, so excluding them costs nothing.
+tools/local-solver/vendor/tiny_http/examples/ssl-cert.pem
+tools/local-solver/vendor/tiny_http/examples/ssl-key.pem

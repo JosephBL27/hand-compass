@@ -1,0 +1,41 @@
+{
+  "name": "poker-trainer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --pretty false",
+    "typecheck:domain": "tsc -p tsconfig.domain.json --pretty false",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:evaluator-parity": "POKER_PARITY_SAMPLES=10000 vitest run tests/evaluator-parity-random.test.ts",
+    "solver:convert-acceptance": "tsx scripts/convert-acceptance-solve.ts",
+    "solver:install-toolchain": "sh scripts/install-solver-toolchain.sh",
+    "solver:build": "sh scripts/solver-sidecar.sh --build-only",
+    "solver:start": "sh scripts/solver-sidecar.sh",
+    "solver:smoke": "tsx scripts/smoke-local-solver.ts",
+    "solver:smoke-breadth": "tsx scripts/smoke-local-solver-breadth.ts",
+    "solver:smoke-curriculum": "node --import tsx scripts/smoke-solver-curriculum.ts",
+    "smoke:full-hands": "node --import tsx scripts/smoke-full-hands.ts"
+  },
+  "dependencies": {
+    "@poker-apprentice/hand-evaluator": "4.3.0",
+    "@vitejs/plugin-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "fast-check": "latest",
+    "tsx": "^4.23.12",
+    "typescript": "latest",
+    "vitest": "latest"
+  },
+  "description": "Hold'em trainer that grades each decision with a real postflop solver when the spot is solvable and labels everything else HEURISTIC."
+}
