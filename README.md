@@ -1,5 +1,7 @@
 # Hand Compass
 
+**Case study:** [josephbl27.github.io/#hand-compass](https://josephbl27.github.io/#hand-compass), part of [my portfolio](https://josephbl27.github.io/).
+
 **Try it: [{{PORTFOLIO_URL}}/demos/hand-compass/]({{PORTFOLIO_URL}}/demos/hand-compass/)**
 (the hosted build runs without the solver; the bundled solve and the labeled
 heuristic still work)
